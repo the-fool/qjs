@@ -1,0 +1,4 @@
+{
+    "eslint.format.enable": true,
+    "jshint.enable": false
+}

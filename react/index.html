@@ -1,0 +1,39 @@
+<html>
+  <head> </head>
+  <body>
+    <script src="./dist/bundle.js"></script>
+    <main>
+        <div id="main"></div>
+    </main>
+    <script>
+      const el = document.querySelector('#main');
+      const config = {
+        allowedGates: ["H", "CX"],
+        circuitOutputs: [
+          "PerQubitProbability",
+          "CheatTable",
+          "BlochSphereProbe",
+        ],
+        columns: 3,
+        rows: 2,
+        startingCircuit: [
+          ["-", "-", "-"],
+          ["-", "-", "-"],
+        ],
+      };
+      const slug = "canvas-qc-ch3-q1-2";
+      const solvableConfig = false;
+      const userState = {};
+      const visualizationKey = "_viz_343438439848394839483__";
+
+      const interactiveConfig = {
+        data: {...config},
+        slug,
+        visualizationKey: 'main',
+        userState,
+        slug
+      }
+      Circuit.default.createInteractive(interactiveConfig)
+    </script>
+  </body>
+</html>
